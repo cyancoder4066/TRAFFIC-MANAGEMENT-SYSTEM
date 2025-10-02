@@ -14,7 +14,8 @@ vehicle_classes = ['car', 'bus', 'truck']
 image_dir = "test_images"
 output_dir = "output_images"
 os.makedirs(output_dir, exist_ok=True)
-image_files = [f for f in os.listdir(image_dir) if f.endswith(".jpg")]
+image_files = [f for f in os.listdir(image_dir) if f.endswith(".png")]
+image_files.sort()  # Optional: sort images by name
 current_index = 0
 
 # Tkinter window
@@ -32,7 +33,7 @@ label = tk.Label(root)
 label.pack()
 
 # Image processing function
-def process_image(image_path):
+def process_image(image_path, save_index):
     image = cv2.imread(image_path)
     height, width, _ = image.shape
     blob = cv2.dnn.blobFromImage(image, 0.00392, (416,416), (0,0,0), True, crop=False)
@@ -56,13 +57,17 @@ def process_image(image_path):
                     y = int(cy - h/2)
                     cv2.rectangle(image, (x,y), (x+w, y+h), (0,255,0), 2)
                     cv2.putText(image, label_text, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0,0,0),2)
+    
+    # Save processed image with sequential numbering
+    output_path = os.path.join(output_dir, f"{save_index+1}.png")
+    cv2.imwrite(output_path, image)
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Show current image
 def show_image():
     global current_index
     img_path = os.path.join(image_dir, image_files[current_index])
-    processed_img = process_image(img_path)
+    processed_img = process_image(img_path, current_index)
     img_pil = Image.fromarray(processed_img)
     img_tk = ImageTk.PhotoImage(img_pil)
     label.imgtk = img_tk
@@ -74,6 +79,8 @@ def next_image():
     if current_index < len(image_files)-1:
         current_index += 1
         show_image()
+    else:
+        print("All images processed and saved in output_images folder.")
 
 def close_window():
     root.destroy()
