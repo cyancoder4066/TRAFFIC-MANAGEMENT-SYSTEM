@@ -113,7 +113,23 @@ python simulation.py
 * Lane-wise vehicle counts are displayed 🧮
 * Simulation runs for a fixed duration (default 300s, adjustable)
 
-### **2. Console Signal Controller**
+### **2. Vehicle Detection System**
+
+```bash
+python vehicle_detection.py
+```
+* A **Vehicle Detection** project using **YOLOv7** and **Python**, which detects vehicles (cars, buses, trucks) in images and saves the processed images with bounding boxes.
+* The project also includes a **Tkinter GUI** for visualizing detections.
+
+## ⚙️ Features
+
+- Detects **cars, buses, and trucks** in images.
+- Draws **bounding boxes** and labels on detected vehicles.
+- Saves processed images in the `output_images` folder with sequential names.
+- **Tkinter GUI** for navigating and viewing images.
+- Compatible with **PNG images** in the `test_images` folder.
+
+### **3. Console Signal Controller**
 
 ```bash
 python Signal_time.py
