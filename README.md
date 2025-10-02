@@ -59,16 +59,6 @@ TRAFFIC-MANAGEMENT-SYSTEM/
 
 ![Simulation Screenshot](images/demo.png)  
 
-
----
-
----
-
-## 🎮 Demo Detection Screenshot
-
-![Test_image Screenshot](test_images/46.png)  
-![Output_image Screenshot](output_images/41.png)  
-
 ---
 
 ## 🔧 Features
@@ -77,7 +67,14 @@ TRAFFIC-MANAGEMENT-SYSTEM/
 - ✅ **Vehicle Generation** – Randomized vehicles with lanes and turn behavior.  
 - ✅ **Realistic Lane Behavior** – Vehicles maintain stopping gaps and follow lane rules.  
 - ✅ **Signal Visualization** – Displays signal state and remaining time.  
-- ✅ **Statistics Tracking** – Lane-wise vehicle counts, total vehicles passed, and vehicles per unit time.  
+- ✅ **Statistics Tracking** – Lane-wise vehicle counts, total vehicles passed, and vehicles per unit time.
+  
+---
+
+## 🎮 Demo Detection Screenshot
+
+![Test_image Screenshot](test_images/46.png)  
+![Output_image Screenshot](output_images/41.png)  
 
 ---
 
