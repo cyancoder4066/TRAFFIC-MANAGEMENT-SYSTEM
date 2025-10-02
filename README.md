@@ -61,7 +61,7 @@ TRAFFIC-MANAGEMENT-SYSTEM/
 
 ---
 
-## 🔧 Features
+## 🔧 Simulation Features
 
 - ✅ **Dynamic Traffic Signal Timing** – Green, yellow, and red durations adjust automatically.  
 - ✅ **Vehicle Generation** – Randomized vehicles with lanes and turn behavior.  
@@ -71,10 +71,20 @@ TRAFFIC-MANAGEMENT-SYSTEM/
   
 ---
 
-## 🎮 Demo Detection Screenshot
+## 🎮 Demo Vehicle Detection Screenshot
 
 ![Test_image Screenshot](test_images/46.png)  
 ![Output_image Screenshot](output_images/41.png)  
+
+---
+
+## ⚙️ Vehicle Detection Features
+
+- Detects **cars, buses, and trucks** in images.
+- Draws **bounding boxes** and labels on detected vehicles.
+- Saves processed images in the `output_images` folder with sequential names.
+- **Tkinter GUI** for navigating and viewing images.
+- Compatible with **PNG images** in the `test_images` folder.
 
 ---
 
@@ -117,14 +127,6 @@ python vehicle_detection.py
 ```
 * A **Vehicle Detection** project using **YOLOv7** and **Python**, which detects vehicles (cars, buses, trucks) in images and saves the processed images with bounding boxes.
 * The project also includes a **Tkinter GUI** for visualizing detections.
-
-## ⚙️ Features
-
-- Detects **cars, buses, and trucks** in images.
-- Draws **bounding boxes** and labels on detected vehicles.
-- Saves processed images in the `output_images` folder with sequential names.
-- **Tkinter GUI** for navigating and viewing images.
-- Compatible with **PNG images** in the `test_images` folder.
 
 ### **3. Console Signal Controller**
 
